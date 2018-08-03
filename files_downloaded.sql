@@ -1,0 +1,2 @@
+SELECT datetime(((downloads.start_time/1000000)-11644473600), "unixepoch"), downloads.target_path, downloads_url_chains.url, downloads.referrer, downloads.danger_type, downloads.mime_type, downloads.original_mime_type, downloads.received_bytes, downloads.total_bytes 
+FROM downloads, downloads_url_chains WHERE downloads.id = downloads_url_chains.id;
