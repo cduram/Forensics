@@ -1,0 +1,1 @@
+SELECT datetime(((visits.visit_time/1000000)-11644473600), "unixepoch"), urls.url, urls.title, urls.visit_count FROM urls, visits WHERE urls.id = visits.url;
